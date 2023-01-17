@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/profile_background"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/profile_background"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:elevation="0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/profilebckg" />
+
+    <ImageView
+        android:id="@+id/user_profile"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-50dp"
+        android:contentDescription="@string/user_profile_picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_background"
+        card_view:srcCompat="@drawable/head" />
+
+    <TextView
+        android:id="@+id/user_name_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/user_name"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/user_profile"
+        app:layout_constraintStart_toStartOf="@+id/user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile" />
+
+    <TextView
+        android:id="@+id/user_altname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/user_altname"
+        android:textColor="@color/material_dynamic_neutral50"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/user_name_big"
+        app:layout_constraintEnd_toEndOf="@+id/user_profile"
+        app:layout_constraintStart_toStartOf="@+id/user_profile" />
+
+    <TextView
+        android:id="@+id/user_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/user_desc"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/user_altname"
+        app:layout_constraintEnd_toEndOf="@+id/user_profile"
+        app:layout_constraintStart_toStartOf="@+id/user_profile" />
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@color/design_default_color_primary"
+        android:baselineAligned="false"
+        android:divider="@drawable/vertical_divider_1"
+        android:dividerPadding="2dp"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_desc"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/user_joined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/user_join_time"
+            android:drawablePadding="8dp"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="16sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24" />
+        <TextView
+            android:id="@+id/user_study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/user_study"
+            android:drawablePadding="8dp"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_baseline_school_24" />
+        <TextView
+            android:id="@+id/user_job"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/user_job"
+            android:drawablePadding="8dp"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="16sp"
+            app:drawableStartCompat="@drawable/ic_baseline_work_24" />
+        <TextView
+            android:id="@+id/user_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/user_location"
+            android:drawablePadding="8dp"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="16sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_location_on_24" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@color/design_default_color_primary"
+        android:baselineAligned="false"
+        android:divider="@drawable/vertical_divider_1"
+        android:dividerPadding="2.5dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_info"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:id="@+id/follower_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/follower_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/followers"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <TextView
+                android:id="@+id/follower_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/followers_count"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/friends_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/friends_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friends"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <TextView
+                android:id="@+id/friends_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friends_count"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/posts_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/posts_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/posts"
+                android:textColor="@color/design_default_color_on_primary" />
+
+            <TextView
+                android:id="@+id/posts_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/posts_count"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_data"
+        card_view:cardCornerRadius="4dp">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardView"
+            android:id="@+id/post1_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/post1_profileheader"
+                    android:background="@color/design_default_color_primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/post1_profileicon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:contentDescription="@string/user_profile_picture"
+                        android:maxWidth="48dp"
+                        android:maxHeight="48dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        card_view:srcCompat="@drawable/head" />
+
+                    <TextView
+                        android:id="@+id/post1_profilename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="@string/user_name"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/post1_profileicon"
+                        app:layout_constraintTop_toTopOf="@+id/post1_profileicon" />
+
+                    <TextView
+                        android:id="@+id/post1_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="@string/post1_date"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="8sp"
+                        app:layout_constraintStart_toEndOf="@+id/post1_profileicon"
+                        app:layout_constraintTop_toBottomOf="@+id/post1_profilename"
+                        app:layout_constraintStart_toStartOf="@+id/post1_profilename" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/post1_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/post1_content"
+                    android:textColor="@color/black"
+                    android:autoLink="web"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post1_profileheader" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:weightSum="3"
+                    android:baselineAligned="false"
+                    android:divider="@drawable/vertical_divider_1"
+                    android:dividerPadding="1dp"
+                    android:orientation="horizontal"
+                    android:showDividers="middle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post1_content"
+                    card_view:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/post1_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral90"
+                        android:text="@string/post_like"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                    <TextView
+                        android:id="@+id/post1_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral90"
+                        android:text="@string/post_comment"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                    <TextView
+                        android:id="@+id/post1_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral90"
+                        android:text="@string/post_share"
+                        android:textColor="@color/black"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/MyCardView"
+            android:id="@+id/post2_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/post1_parent"
+            card_view:cardUseCompatPadding="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/post2_profileheader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/design_default_color_primary"
+                    android:paddingEnd="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/post2_profileicon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:contentDescription="@string/user_profile_picture"
+                        android:maxWidth="48dp"
+                        android:maxHeight="48dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        card_view:srcCompat="@drawable/head" />
+
+                    <TextView
+                        android:id="@+id/post2_profilename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="@string/user_name"
+                        android:textColor="@color/design_default_color_on_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/post2_profileicon"
+                        app:layout_constraintTop_toTopOf="@+id/post2_profileicon" />
+
+                    <TextView
+                        android:id="@+id/post2_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="@string/post2_date"
+                        android:textColor="@color/material_dynamic_neutral90"
+                        android:textSize="8sp"
+                        app:layout_constraintStart_toEndOf="@+id/post2_profileicon"
+                        app:layout_constraintTop_toBottomOf="@+id/post2_profilename"
+                        app:layout_constraintStart_toStartOf="@+id/post2_profilename" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+3
+                <TextView
+                    android:id="@+id/post2_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:text="@string/post2_content"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post2_profileheader" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:baselineAligned="false"
+                    android:divider="@drawable/vertical_divider_1"
+                    android:dividerPadding="1dp"
+                    android:orientation="horizontal"
+                    android:showDividers="middle"
+                    android:weightSum="3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post2_content"
+                    card_view:cardCornerRadius="4dp">
+
+                    <TextView
+                        android:id="@+id/post2_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral90"
+                        android:text="@string/post_like"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/post2_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral90"
+                        android:text="@string/post_comment"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/post2_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/material_dynamic_neutral90"
+                        android:text="@string/post_share"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
